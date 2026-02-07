@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Daniela 💖</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #fde2e4, #fadadd);
+        }
+
+        .letter {
+            background: white;
+            padding: 40px;
+            max-width: 650px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #b04b7a;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .music-btn {
+            margin: 20px 0 15px;
+            background: linear-gradient(135deg, #f28ab2, #d96aa7);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .music-btn.playing {
+            background: linear-gradient(135deg, #a45ba5, #7b3f8c);
+            cursor: default;
+        }
+
+        .music-btn:hover:not(.playing) {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-size: 17px;
+            color: #b04b7a;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Audio -->
+    <audio id="music" loop>
+        <source src="One Direction - Little Things (Lyric Video)(MP3_160K).mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <div class="letter">
+        <h1>💖 Para Daniela 💖</h1>
+
+        <button id="musicBtn" class="music-btn" onclick="playMusic()">
+            🎶 Reproducir música
+        </button>
+
+        <p>
+            Daniela, desde que llegaste a mi vida entendí que los pequeños detalles
+            son los que más importan. Tu sonrisa, tu voz y tu forma de ser
+            hacen que todo tenga sentido.
+        </p>
+
+        <p>
+            No te escribo esto prometiendo perfección, sino sinceridad.
+            Prometo cuidarte, escucharte, reír contigo y caminar a tu lado
+            incluso en los días nublados.
+        </p>
+
+        <p>
+            Hoy no fue solo un "sí".  
+            Fue el comienzo de algo que quiero construir contigo,
+            con paciencia, cariño y mucho amor.
+        </p>
+
+        <div class="signature">
+            Te quiero mucho mi Princesita hermosa,  
+            gracias por aparecer en mi vida 💖
+        </div>
+    </div>
+
+<script>
+    function playMusic() {
+        const music = document.getElementById("music");
+        const btn = document.getElementById("musicBtn");
+
+        music.play();
+        btn.textContent = "💖 Música sonando...";
+        btn.classList.add("playing");
+        btn.disabled = true;
+    }
+</script>
+
+</body>
+</html>
